@@ -1,0 +1,585 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>
+    {% block title %}
+    O.A-BUTU
+    {% endblock %}
+  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- Tab-image -->
+  <link href="{% static 'img/OA-logo.svg' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Jun 13 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <nav id="top-bar">
+    <a href="index.html">
+      <img class="main-logo" src="{% static 'img/OA-logo-j.jpg' %}" alt="logo">
+    </a>
+  </nav>
+  <header id="header" class="d-flex flex-column justify-content-center">
+    
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Logo</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Meet O.A</span></a></li>
+        <!-- <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li> -->
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Thoughts?</span></a></li>
+        <!-- <li><a href="blog.html" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Blog</span></a></li> -->
+        <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div id="carouselExampleInterval" class="carousel slide" data-aos="zoom-in" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="{% static 'img/banner-1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h2 class="text-dark quote"><q>The main goal of a leader is to serve.</q></h2>
+          <p class="text-light badge text-bg-primary">O.A</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'img/banner-2.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption ">
+          <h2 class="text-dark quote"><q>Leadership without service is like coming to write your final paper without a pen.</q></h2>
+          <p class="text-light badge text-bg-primary">O.A</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'img/banner-3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h2 class="text-dark quote"><q>The cost of change is discipline.</q></h2>
+          <p class="text-light badge text-bg-primary">O.A</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- <section id="hero" class="d-flex flex-column justify-content-center">
+    
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>I'm ADEBUTU OLUBUKUNOLA</h1>
+      <p><span class="typed" data-typed-items="The main goal of a leader is to server, Leadership without service is like coming to write your final paper without a pen,
+        The cost of change is discipline,"></span><br>O.A
+      </p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </section> -->
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>MEET O.A</h2>
+          <!-- <p>
+            Olubukunola Adebutu is a results-driven Astute Business Manager with a proven track record in both the real estate and tourism industry as well as the agro-allied farm sector. With a strategic mindset and a passion for driving business growth and delivering exceptional customer experiences, Olubukunola brings extensive experience in developing and executing innovative strategies, cultivating partnerships, and leading high-performing teams. With a strong background in financial management, operational excellence, and stakeholder engagement, Olubukunola is committed to creating sustainable value and positioning companies for long-term success in a dynamic market.Furthermore, as a visionary leader, Olubukunola is dedicated to driving business growth in the agro-allied farm industry. With expertise in strategic planning, operational management, and market development, Olubukunola is adept at analyzing financial data, engaging stakeholders, and providing effective team leadership. With a firm belief in promoting sustainable agriculture practices and ensuring food security, Olubukunola actively leverages technology and innovation to optimize farming operations and deliver high-quality agricultural products.
+            Combined, Olubukunola Adebutu possesses a unique blend of skills, including financial acumen, operational management, stakeholder engagement, strategic planning, and team leadership, which enable success across diverse industries such as real estate, tourism, and agro-allied farming.
+          </p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <p class="forword-text">
+              Olubukunola Adebutu is a results-driven Astute Business Manager with a proven track record in both the real estate and tourism industry as well as the agro-allied farm sector. With a strategic mindset and a passion for driving business growth and delivering exceptional customer experiences, Olubukunola brings extensive experience in developing and executing innovative strategies, cultivating partnerships, and leading high-performing teams.
+            </p>
+            <p class="forword-text-1">
+              With a strong background in financial management, operational excellence, and stakeholder engagement, Olubukunola is committed to creating sustainable value and positioning companies for long-term success in a dynamic market.Furthermore, as a visionary leader, Olubukunola is dedicated to driving business growth in the agro-allied farm industry. With expertise in strategic planning, operational management, and market development, Olubukunola is adept at analyzing financial data, engaging stakeholders, and providing effective team leadership. With a firm belief in promoting sustainable agriculture practices and ensuring food security, Olubukunola actively leverages technology and innovation to optimize farming operations and deliver high-quality agricultural products.
+            </p>
+            <p class="forword-text-1">
+              Overall, Olubukunola Adebutu possesses a unique blend of skills, including financial acumen, operational management, stakeholder engagement, strategic planning, and team leadership, which enable success across diverse industries such as real estate, tourism, and agro-allied farming.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <img src="{% static 'img/md-picture-flip.jpg' %}" class="img-fluid port-img" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Profile</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Chief Vision Officer</h4>
+              <h5>2020 - Present</h5>
+              <p><em>Solomon Kesinton Agro-Allied Limited, Nigeria </em></p>
+              <ul>
+                <li>
+                  Leveraged industry partnerships and engaged with key stakeholders, including farmers' associations, suppliers, and government agencies, to foster collaborations, secure funding, and ensure compliance with regulatory requirements.
+                </li>
+                <li>
+                  Implemented modern farming techniques, including precision agriculture and sustainable farming practices, resulting in increased productivity, resource optimization, and environmental stewardship.
+                </li>
+                <li>
+                  Led efforts to adopt innovative technologies, such as IoT-based monitoring systems and farm management software, to enhance operational efficiency, quality control, and traceability.
+                </li>
+                <li>
+                  Conducted financial analysis, budgeting, and cost management, achieving profitability targets and optimizing resource allocation.
+                </li>
+                <li>
+                  Built and motivated cross-functional teams, providing mentorship, training, and creating a positive work environment that fostered employee engagement and productivity.
+                </li>
+              </ul>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="resume-item">
+                      <h4>Chief Vision Officer</h4>
+                      <h5>2018 - Present</h5>
+                      <p><em>Kesinton Real Estate and Tourism, Nigeria </em></p>
+                      <ul>
+                        <li>
+                          Providing strategic direction and leadership, overseeing all aspects of the company's operations, including real estate development, property management, and tourism services that increased the company’s revenue by 20%
+                        </li>
+                        <li>
+                          Developing and executing business plans, driving revenue growth, and expanding market presence through effective market analysis, competitive positioning, and targeted marketing initiatives.
+                        </li>
+                        <li>
+                          Fostered strategic partnerships with key stakeholders, including government agencies, investors, and industry associations, to enhance brand visibility and drive business opportunities.
+                        </li>
+                        <li>
+                          Led the successful launch of new projects, ensuring adherence to quality standards, budget control, and timely delivery to exceed customer expectations.
+                        </li>
+                        <li>
+                          Implemented innovative customer-centric initiatives, resulting in increased customer satisfaction, repeat business, and positive brand reputation.
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="resume-item">
+                      <h4>Facilities Consultant</h4>
+                      <h5>2014 - Present</h5>
+                      <p><em>Premier Lotto Ltd/Baba Ijebu, NIgeria</em></p>
+                      <ul>
+                        <li>
+                          Oversee all replacement and purchase of both internal and external facilities of the company.. 
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="resume-item">
+                      <h4>Facilities Officer</h4>
+                      <h5>2015 - Present</h5>
+                      <p><em>Premier Lotto Ltd/Baba Ijebu, NIgeria</em></p>
+                      <ul>
+                        <li>
+                          <!-- Oversee all replacement and purchase of both internal and external facilities of the company..  -->
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="accordion-header">
+                  <button id="accordion" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                   
+                  </button>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Masters</h4>
+              <h5>2019 - 2021</h5>
+              <p><em>University of Kent, Canterbury, UK </em></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nobis, tempore facilis consequuntur ipsum volupt</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelors</h4>
+              <h5>2012 - 2018</h5>
+              <p><em>Babcock University, Ogun state, Nigeria </em></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nobis, tempore facilis consequuntur ipsum volupt</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ===============Awards sections=========== -->
+    <div class="container row" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Awards & Recognitions</h2>
+      </div>
+      <div class="row">
+        <div class="card mb-3 me-5 award-card" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{% static 'img/award-1.jpg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Person Of The Year</h5>
+                <p class="card-text">People's Choice Awards</p>
+                <p class="card-text"><small class="text-muted"><button class="btn btn-primary btn-sm"><b>2022</b></button></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 ms-5 award-card" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{% static 'img/award-2.jpg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Trail Blaizer of the Youth</h5>
+                <p class="card-text">Long Country Youth Association</p>
+                <p class="card-text"><small class="text-muted"><button class="btn btn-primary btn-sm"><b>2020</b></button></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =======End awards =========-->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/jummy-test-e.jpg' %}" class="testimonial-img" alt="">
+                <h3>Olabomi Jummoke</h3>
+                <h4>Data Entry Specialist</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Mr. Olubunkunola is an exceptional individual whose unwavering dedication and expertise have left an indelible impact on our organization. His exceptional leadership skills and ability to inspire and motivate the team have propelled us to achieve unprecedented success.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/toyo-test.jpg' %}" class="testimonial-img" alt="">
+                <h3>Falako Omotoyosi</h3>
+                <h4>Software Developer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Mr. Olubukunola is an outstanding managing director whose strategic vision and inclusive leadership style have propelled our organization to unprecedented success. His unwavering commitment to fostering a collaborative work environment and his exemplary integrity make him an invaluable asset to any organization.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/leke-test-e.jpg' %}" class="testimonial-img" alt="">
+                <h3>Leke</h3>
+                <h4>Warehouse Manager</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I have had the pleasure of working closely with Mr. Olubunkunola, and I can confidently say that his meticulous attention to detail and problem-solving abilities have been instrumental in overcoming complex challenges and driving our projects to completion with remarkable success.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Jane Doe</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur soluta doloremque ratione aspernatur repellat, iure ipsa ullam, debitis illum, provident libero. Deleniti itaque obcaecati, optio earum sapiente voluptate sed reprehenderit.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                <h3>John Doe</h3>
+                <h4>Entrepreneur</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia quasi voluptatem cumque, ratione vero eum quam est ullam autem ipsum recusandae at labore sit incidunt deserunt nihil hic facilis similique!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Projects and Oureach</h2>
+          <p class="before-post">I have embarked on multiple community projects across the state, i am a firm believer of, we are little pieces of this big country and town by town, state by state, region by region, we can create the country we want.
+          </p>
+        </div>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="card portfolio-item filter-card project-card" style="width: 27rem;">
+            <img src="{% static 'img/banner.jpg' %}" class="card-img-top project-card-img" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="{% url 'frontend:details' %}" class="btn btn-primary portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">Read more..</a>
+            </div>
+          </div>
+          <div class="card portfolio-item filter-card project-card" style="width: 27rem;">
+            <img src="{% static 'img/banner.jpg' %}" class="card-img-top project-card-img" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="{% url 'frontend:details' %}" class="btn btn-primary portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">Read more..</a>
+            </div>
+          </div>
+          <div class="card portfolio-item filter-card project-card" style="width: 27rem;">
+            <img src="{% static 'img/banner.jpg' %}" class="card-img-top project-card-img" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="{% url 'frontend:details' %}" class="btn btn-primary portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">Read more..</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Thoughts?</h2>
+          <p class="before-post">
+            I have been privileged to experience different industries in different capacities, hence why i would be sharing my thoughts on some of my experiences for you to learn from. 
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+                <i class="bx bxl-dribbble"></i>
+              </div>
+              <h4><a href="{% url 'frontend:details' %}" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">Lorem ipsum </a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+                <i class="bx bx-layer"></i>
+              </div>
+              <h4><a href="{% url 'frontend:details' %}" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">Lorem ipsum </a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Office location</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+01 234 1963</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>ADEBUTU OLUBUKUNOLA</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nihil enim! Est ipsa error, neque consectetur repellendu!</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-wikipedia"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
